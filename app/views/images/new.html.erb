@@ -1,0 +1,27 @@
+<h1>Images#new</h1>
+
+<%= form_for(:image, :url => {:action => 'create'}, :html => {:multipart => true}) do |f| %>
+<%= f.file_field :image %>
+<%= simple_format " \n " %>
+<%= simple_format " \n " %>
+<%= simple_format " \n " %>
+<%= simple_format " \n " %>
+
+<%= simple_format " Time:" %> 
+<%= date_field(:event, :born_on) %>
+<%= time_field(:event, :started_at) %>
+<%= simple_format " \n " %>
+
+
+
+<%= simple_format " Address:" %> 
+<%= email_field(:event, :address) %>
+<%= simple_format " \n " %>
+
+
+
+<%= f.submit "Submit" %>
+<% end %>
+
+
+
